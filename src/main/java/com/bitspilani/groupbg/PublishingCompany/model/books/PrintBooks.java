@@ -1,6 +1,13 @@
 package com.bitspilani.groupbg.PublishingCompany.model.books;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
 public class PrintBooks {
+    @Id
     private Long id;
     private String email;
     private String address;
