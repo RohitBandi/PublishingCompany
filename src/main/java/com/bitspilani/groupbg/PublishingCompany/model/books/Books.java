@@ -1,7 +1,14 @@
 package com.bitspilani.groupbg.PublishingCompany.model.books;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
 public class Books {
-    private Long id;
+    @Id
+    private Long number;
     private String title;
     private String description;
     private String language;
@@ -15,19 +22,19 @@ public class Books {
         this.language = language;
     }
 
-    public Books(Long id, String title, String description, String language) {
-        this.id = id;
+    public Books(Long number, String title, String description, String language) {
+        this.number = number;
         this.title = title;
         this.description = description;
         this.language = language;
     }
 
-    public Long getId() {
-        return id;
+    public Long getNumber() {
+        return number;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setNumber(Long number) {
+        this.number = number;
     }
 
     public String getTitle() {
@@ -57,7 +64,7 @@ public class Books {
     @Override
     public String toString() {
         return "Books{" +
-                "id=" + id +
+                "id=" + number +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", language='" + language + '\'' +

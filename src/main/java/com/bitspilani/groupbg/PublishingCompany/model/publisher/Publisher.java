@@ -1,8 +1,14 @@
 package com.bitspilani.groupbg.PublishingCompany.model.publisher;
 
-import java.time.LocalDate;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+import java.time.LocalDate;
+@Entity
+@Table
 public class Publisher {
+    @Id
     private Long id;
     private LocalDate signDate;
     private String terms;

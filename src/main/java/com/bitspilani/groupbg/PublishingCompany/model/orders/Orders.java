@@ -1,8 +1,15 @@
 package com.bitspilani.groupbg.PublishingCompany.model.orders;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.time.LocalDate;
 
+@Entity
+@Table
 public class Orders {
+    @Id
     private Long id;
     private String status;
     private LocalDate orderDate;

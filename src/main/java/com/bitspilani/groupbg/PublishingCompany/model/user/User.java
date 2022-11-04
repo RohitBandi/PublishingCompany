@@ -1,9 +1,15 @@
 package com.bitspilani.groupbg.PublishingCompany.model.user;
 
-import java.time.LocalDate;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+import java.time.LocalDate;
+@Entity
+@Table
 public class User {
 
+    @Id
     private Long id;
     private String name;
     private String email;
